@@ -1,0 +1,40 @@
+[
+  {
+    "ID": "101",
+    "name": "karan",
+    "email": "karan123@gmail.com",
+    "password": "karan123@2",
+    "role": "staff"
+  },
+  {
+    "ID": "201",
+    "name": "suresh",
+    "email": "suresh123@gmail.com",
+    "password": "suresh@123",
+    "role": "staff"
+  },
+  {
+    "ID": "301",
+    "name": "mukesh",
+    "email": "mukesh123@gmail.com",
+    "password": "mukesh@234",
+    "role": "admin",
+    "datetime": "2026-03-23 15:12:44"
+  },
+  {
+    "ID": "401",
+    "name": "tara",
+    "email": "tara123@gmail.com",
+    "password": "tara!123",
+    "role": "staff",
+    "datetime": "2026-03-23 15:54:03"
+  },
+  {
+    "ID": "501",
+    "name": "mukesh",
+    "email": "karan123@gmail.com",
+    "password": "karan@123",
+    "role": "staff",
+    "datetime": "2026-03-23 16:58:54"
+  }
+]

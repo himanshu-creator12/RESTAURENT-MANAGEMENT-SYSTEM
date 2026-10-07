@@ -1,0 +1,50 @@
+{
+  "starters": {
+    "Veg Spring Roll": 120,
+    "Paneer Tikka": 180,
+    "Veg Manchurian": 150,
+    "Chilli Paneer": 170,
+    "French Fries": 100
+  },
+  "main Course": {
+    "Butter Paneer Masala": 220,
+    "Shahi Paneer": 210,
+    "Kadai Paneer": 200,
+    "Dal Makhani": 180,
+    "Mix Veg": 160
+  },
+  "breads": {
+    "Tandoori Roti": 20,
+    "Butter Naan": 40,
+    "Garlic Naan": 50,
+    "Lachha Paratha": 45
+  },
+  "rice": {
+    "Plain Rice": 90,
+    "Jeera Rice": 120,
+    "Veg Pulao": 150,
+    "Veg Biryani": 180
+  },
+  "fast Food": {
+    "Veg Burger": 80,
+    "Cheese Burger": 100,
+    "Veg Pizza": 200,
+    "Pasta": 150,
+    "Noodles": 120
+  },
+  "drinks": {
+    "Cold Drink": 40,
+    "Lassi": 60,
+    "Mango Shake": 80,
+    "Coffee": 50,
+    "Tea": 30
+  },
+  "desserts": {
+    "Gulab Jamun": 60,
+    "Rasgulla": 60,
+    "Ice Cream": 80,
+    "Chocolate Cake": 120,
+    "Jalebi": 70,
+    "Halwa": 50
+  }
+}

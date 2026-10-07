@@ -1,0 +1,32 @@
+# -------------------------
+    # SIGN IN
+    # -------------------------
+@classmethod
+def signin(cls):
+
+        print("\n========== SIGN IN ==========")
+
+        user_id = input("Enter your ID: ")
+        password = input("Enter password: ")
+
+        if user_id in cls.users:
+
+            user = cls.users[user_id]
+
+            if user.password == password:
+
+                print("\nSUCCESS: Sign in successful!")
+                print("Welcome,", user.name)
+                print("Role:", user.role)
+
+                return user
+
+            else:
+
+                print("ERROR: Incorrect password!")
+
+        else:
+
+            print("ERROR: User ID not found!")
+
+        return None
