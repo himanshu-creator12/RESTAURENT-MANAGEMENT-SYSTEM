@@ -25,6 +25,54 @@ def write_data():
 # READ DATA
 # ==========================================
 
+def  cancel_booking():
+
+    while True:
+
+        try:
+
+            user_name = input(
+                "Enter customer name to cancel booking: "
+            ).strip()
+
+            if not user_name:
+                print("Customer name can't be empty!")
+                continue
+
+            found = False
+
+            for booking in customer_booking_data:
+
+                if booking["name"].lower() == user_name.lower():
+
+                    customer_booking_data.remove(booking)
+
+                    write_data()
+
+                    print(
+                        "\n***** BOOKING CANCELLED *****"
+                    )
+                    print(
+                        "============================="
+                    )
+
+                    found = True
+                    break
+
+            if not found:
+
+                print(
+                    "\n**** BOOKING NOT FOUND ****"
+                )
+
+            break
+
+        except Exception as error:
+
+            print("Error:", error)
+
+
+            
 def read_data():
 
     try:
@@ -367,12 +415,17 @@ def data_vew():
             print("==============================")
             print("1. SEARCH BOOKING")
             print("2. VIEW ALL BOOKING")
-            print("3. EXIT")
+            print("3. CANCEL BOOKING")
+            print("4. EXIT")
             print("==============================")
 
             staff_input = input(
                 "Enter your choice: "
             ).strip()
+
+            if not staff_input:
+                print("Input can't be empty!")
+                continue
 
             if not staff_input.isdigit():
                 print("Only numbers are allowed!")
@@ -380,12 +433,19 @@ def data_vew():
 
             staff_input = int(staff_input)
 
-            # SEARCH
+            # =========================
+            # SEARCH BOOKING
+            # =========================
+
             if staff_input == 1:
 
                 user_name = input(
                     "Enter the customer name: "
                 ).strip()
+
+                if not user_name:
+                    print("Customer name can't be empty!")
+                    continue
 
                 found = False
 
@@ -395,47 +455,151 @@ def data_vew():
 
                         print("\n***** BOOKING FOUND *****")
                         print("=========================")
+
                         print(
-                            json.dumps(
-                                booking,
-                                indent=4
-                            )
+                            f"Customer Name : {booking['name']}"
                         )
+                        print(
+                            f"Tables        : {booking['table']}"
+                        )
+                        print(
+                            f"Seats         : {booking['seats']}"
+                        )
+                        print(
+                            f"Duration      : {booking['duration']}"
+                        )
+                        print(
+                            f"Timing        : {booking['timing']}"
+                        )
+                        print(
+                            f"Date & Time   : {booking['date_time']}"
+                        )
+
                         print("=========================")
 
                         found = True
+                        break
 
                 if not found:
-                    print("**** BOOKING NOT FOUND ****")
 
-            # VIEW ALL
+                    print(
+                        "**** BOOKING NOT FOUND ****"
+                    )
+
+            # =========================
+            # VIEW ALL BOOKING
+            # =========================
+
             elif staff_input == 2:
 
                 print("\n***** ALL BOOKING DATA *****")
                 print("============================")
 
                 if not customer_booking_data:
+
                     print("No bookings found.")
 
                 else:
-                    print(
-                        json.dumps(
-                            customer_booking_data,
-                            indent=4
+
+                    for number, booking in enumerate(
+                        customer_booking_data,
+                        start=1
+                    ):
+
+                        print(f"\nBooking {number}")
+                        print("--------------------------------")
+
+                        print(
+                            f"Customer Name : {booking['name']}"
                         )
-                    )
+                        print(
+                            f"Tables        : {booking['table']}"
+                        )
+                        print(
+                            f"Seats         : {booking['seats']}"
+                        )
+                        print(
+                            f"Duration      : {booking['duration']}"
+                        )
+                        print(
+                            f"Timing        : {booking['timing']}"
+                        )
+                        print(
+                            f"Date & Time   : {booking['date_time']}"
+                        )
 
                 print("============================")
 
-            # EXIT
+            # =========================
+            # CANCEL BOOKING
+            # =========================
+
             elif staff_input == 3:
 
-                print("Exiting booking data...")
+                user_name = input(
+                    "Enter customer name to cancel booking: "
+                ).strip()
+
+                if not user_name:
+
+                    print(
+                        "Customer name can't be empty!"
+                    )
+                    continue
+
+                found = False
+
+                for booking in customer_booking_data:
+
+                    if booking["name"].lower() == user_name.lower():
+
+                        customer_booking_data.remove(
+                            booking
+                        )
+
+                        write_data()
+
+                        print(
+                            "\n***** BOOKING CANCELLED *****"
+                        )
+                        print(
+                            "============================="
+                        )
+
+                        found = True
+                        break
+
+                if not found:
+
+                    print(
+                        "\n**** BOOKING NOT FOUND ****"
+                    )
+
+            # =========================
+            # EXIT
+            # =========================
+
+            elif staff_input == 4:
+
+                print(
+                    "\nExiting booking data..."
+                )
                 break
+
+            # =========================
+            # INVALID CHOICE
+            # =========================
 
             else:
 
-                print("Invalid input!")
+                print(
+                    "Invalid choice! "
+                    "Please enter 1, 2, 3 or 4."
+                )
+
+        # =============================
+        # EXCEPTION HANDLING
+        # =============================
 
         except Exception as error:
 

@@ -4,7 +4,8 @@
         "Paneer Tikka": 180,
         "Veg Manchurian": 150,
         "Chilli Paneer": 170,
-        "French Fries": 150
+        "French Fries": 100,
+        "Shahi Paneer": 210
     },
     "main Course": {
         "Butter Paneer Masala": 220,
@@ -15,12 +16,14 @@
     },
     "breads": {
         "Tandoori Roti": 20,
-        "Butter Naan": 60,
+        "Butter Naan": 40,
+        "Garlic Naan": 50,
         "Lachha Paratha": 45
     },
     "rice": {
-        "Plain Rice": 90,
+        "Plain Rice": 100,
         "Jeera Rice": 120,
+        "Veg Pulao": 150,
         "Veg Biryani": 180
     },
     "fast Food": {
@@ -33,7 +36,6 @@
     "drinks": {
         "Cold Drink": 40,
         "Lassi": 60,
-        "Mango Shake": 80,
         "Coffee": 50,
         "Tea": 20
     },
@@ -41,13 +43,9 @@
         "Gulab Jamun": 60,
         "Rasgulla": 60,
         "Ice Cream": 80,
-        "Chocolate Cake": 120,
-        "Jalebi": 70
-    },
-    "dal makhani": {
-        "main course": 180
+        "Chocolate Cake": 120
     },
     "main course": {
-        "Kadai Paneer": 200
+        "Shahi Paneer": 210
     }
 }

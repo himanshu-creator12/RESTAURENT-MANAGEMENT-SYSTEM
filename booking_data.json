@@ -1,10 +1,10 @@
 [
     {
         "name": "himanshu",
-        "table": 4,
-        "seats": 3,
+        "table": 2,
+        "seats": 4,
         "duration": "2 hours",
-        "timing": "1:00 PM - 3:00 PM",
-        "date_time": "2026-10-06 12:52:40"
+        "timing": "3:00 PM - 5:00 PM",
+        "date_time": "2026-10-07 14:27:21"
     }
 ]

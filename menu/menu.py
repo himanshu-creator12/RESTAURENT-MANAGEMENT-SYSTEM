@@ -108,23 +108,25 @@ def write_menu():
 # SHOW MENU
 # ==============================
 
+
 def show_menu():
 
     read_menu()
 
-    print("\n")
-    print("================================")
-    print("             MENU")
-    print("================================")
+    print("\n==============================================")
+    print("                  MENU")
+    print("==============================================")
+
+    print(f"{'CATEGORY':<15} {'ITEM':<20} {'PRICE':>10}")
+    print("----------------------------------------------")
 
     for category, items in user_menu.items():
 
-        print(f"\n--- {category.upper()} ---")
-
         for item, price in items.items():
-            print(f"{item} : ₹{price}")
+            print(f"{category:<15} {item:<20} ₹{price:>8}")
 
-    print("================================")
+    print("==============================================")
+
 
 
 # ==============================
